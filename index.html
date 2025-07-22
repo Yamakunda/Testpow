@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ella - Fashion E-commerce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      /* Custom Tailwind CSS Configuration */
+      @layer base {
+        body {
+          font-family: 'Poppins', sans-serif;
+        }
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              poppins: ['Poppins', 'sans-serif'],
+            },
+            colors: {
+              'main-color-secondary': '#fff',
+              'main-color-primary': '#232323',
+              'main-color-text-primary': '#232323',
+              'main-color-text-secondary': '#3c3c3c',
+              'main-color-text-support-1': '#969696',
+              'main-color-text-support-2': '#999',
+              'main-color-text-support-3': '#cfcfcf',
+              'main-color-text-light': '#fff',
+              'main-color-link-dark': '#b05d5d',
+              'main-color-bg-light': '#fff',
+              'main-color-boder': '#c7c7c7',
+              'main-color-badge-grey-10': '#f8f8f8',
+              'main-color-badge-grey-30': '#c2c2c2',
+              'main-color-badge-sale-red': '#e95144',
+              'main-color-badge-black-100': '#000',
+              'main-color-badge-yellow-80': '#ffbb49',
+              'main-color-badge-light-red': '#ef6454',
+              'main-color-badge-blue-40': '#06bfe2',
+              'home-1-secondary-color': '#ffe8e8',
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="font-poppins leading-normal bg-main-color-secondary text-main-color-text-primary">
+    <div class="relative flex flex-col items-center justify-start w-full">
+        <!-- Header -->
+        <header class="flex flex-col items-center justify-center w-full text-xs bg-main-color-bg-light">
+            <!-- Top Banner -->
+            <div class="flex items-center justify-center w-full text-center text-main-color-link-dark font-medium bg-home-1-secondary-color py-2 px-4 md:px-0">
+                <p class="my-auto text-sm md:text-xs">MID-SEASON SALE UP TO 70% OFF. SHOP NOW</p>
+                <img src="image/Close.svg" alt="Close" class="w-4 h-4 ml-2 cursor-pointer opacity-70 hover:opacity-100 transition-opacity duration-300">
+            </div>
+
+            <!-- Main Header Content -->
+            <div class="flex flex-col md:flex-row items-center md:items-end justify-between w-full md:w-2/3 mt-4 px-5 pb-4 md:pb-0 border-b md:border-b-0 border-main-color-boder">
+                <img src="image/Ella_Logo.svg" alt="Ella Logo" class="w-20 md:w-auto mb-4 md:mb-0">
+
+                <div class="flex flex-col items-center md:items-end justify-center w-full md:min-w-60 md:ml-auto">
+                    <!-- Top Right Info (Customer Service, Language, Currency, Search) -->
+                    <div class="flex flex-wrap items-center justify-center md:justify-end gap-3 md:gap-5 mb-3 md:mb-0">
+                        <p class="my-auto text-main-color-text-primary hidden md:block">Customer Service 091 234-ELLA</p>
+
+                        <div class="my-auto flex items-center justify-center gap-2 md:gap-4 font-medium whitespace-nowrap">
+                            <div class="my-auto flex items-center justify-start gap-1 md:gap-2">
+                                <img src="image/Language_flag.svg" alt="Language flag" class="w-4 h-4 md:w-5 md:h-5 object-contain object-center">
+                                <div class="my-auto flex items-center justify-start">
+                                    <span class="my-auto text-main-color-text-primary">ENG</span>
+                                    <img src="image/Dropdown_1.svg" alt="Dropdown" class="w-3 h-3 md:w-5 md:h-5 object-contain object-center">
+                                </div>
+                            </div>
+
+                            <div class="my-auto flex items-center justify-start gap-1 md:gap-2">
+                                <img src="image/Currency_flag.svg" alt="Currency flag" class="w-4 h-4 md:w-5 md:h-5 object-contain object-center">
+                                <div class="my-auto flex items-center justify-start">
+                                    <span class="my-auto text-main-color-text-primary">USD</span>
+                                    <img src="image/Dropdown_1.svg" alt="Dropdown" class="w-3 h-3 md:w-5 md:h-5 object-contain object-center">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="my-auto flex items-center justify-between w-full max-w-xs md:w-40 min-h-8 whitespace-nowrap bg-main-color-badge-grey-10 shadow-sm px-4 py-1">
+                            <span class="my-auto text-main-color-text-primary">Search</span>
+                            <img src="image/Search.svg" alt="Search" class="w-4 h-4 md:w-5 md:h-5 object-contain object-center">
+                        </div>
+                    </div>
+
+                    <p class="mt-2 md:mt-5 font-bold text-main-color-text-primary text-center text-xs md:text-sm">FREE SHIPPING ON ALL ORDERS. NO MINIMUM PURCHASE</p>
+
+                    <!-- User Actions (Shopping Cart, Wishlist, Account) -->
+                    <div class="flex items-center justify-center md:justify-start mt-3 md:mt-5 gap-4 md:gap-6 text-sm flex-wrap">
+                        <div class="flex items-center justify-start gap-2">
+                            <img src="image/Shopping_Cart.svg" alt="Shopping Cart" class="w-4 h-4 md:w-5 md:h-5">
+                            <div class="my-auto flex items-center justify-start">
+                                <span class="my-auto text-main-color-text-primary">Shopping Cart</span>
+                                <div class="my-auto flex flex-col justify-center items-center w-5 h-5 rounded-full whitespace-nowrap bg-home-1-secondary-color ml-1">
+                                    <span class="text-main-color-text-primary text-xs">0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-start gap-2">
+                            <img src="image/Heart.svg" alt="My Wish Lists" class="w-4 h-4 md:w-5 md:h-5">
+                            <div class="my-auto flex items-center justify-start">
+                                <span class="my-auto text-main-color-text-primary">My Wish Lists</span>
+                            </div>
+                        </div>
+
+                        <p class="text-main-color-text-primary text-center">Sign In or Create an account</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="flex flex-wrap justify-center w-full mt-4 gap-4 md:gap-8 text-sm font-bold text-main-color-secondary bg-main-color-primary py-3 px-5 md:w-full">
+                <button class="whitespace-nowrap hover:text-main-color-link-dark transition-colors duration-300">NEW IN</button>
+                <button class="whitespace-nowrap hover:text-main-color-link-dark transition-colors duration-300">TREND</button>
+                <button class="whitespace-nowrap hover:text-main-color-link-dark transition-colors duration-300">COLLECTION</button>
+                <button class="whitespace-nowrap hover:text-main-color-link-dark transition-colors duration-300">LOOKBOOK</button>
+                <button class="whitespace-nowrap hover:text-main-color-link-dark transition-colors duration-300">DEMO</button>
+                <button class="whitespace-nowrap hover:text-main-color-link-dark transition-colors duration-300">SHOP INSTAGRAM</button>
+                <button class="whitespace-nowrap hover:text-main-color-link-dark transition-colors duration-300">BRAND</button>
+                <button class="whitespace-nowrap hover:text-main-color-link-dark transition-colors duration-300">BLOG</button>
+                <button class="whitespace-nowrap hover:text-main-color-link-dark transition-colors duration-300">FAQs</button>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="w-full text-center">
+            <div class="relative flex justify-center md:justify-start w-full min-h-[50vh] md:min-h-[calc(100vh*9/10)] px-5 py-8 lg:px-96 lg:py-16">
+                <img src="image/Hero_background.png" alt="Hero background" class="absolute inset-0 object-cover object-center w-full h-full">
+                <div class="relative flex flex-col items-center md:items-start justify-center w-full md:w-1/3 text-center md:text-left"> 
+                    <div class="relative flex flex-col items-center md:items-start justify-start w-full max-w-md text-main-color-text-primary"> 
+                        <div class="flex flex-col items-center md:items-start justify-start text-3xl md:text-4xl font-bold whitespace-nowrap tracking-wider"> 
+                            <h1 class="text-main-color-text-primary">COSMOPOLIS</h1>
+                            <div class="flex w-8 md:w-10 h-0.5 mt-2 bg-main-color-text-primary"></div>
+                        </div>
+                        <p class="mt-4 text-xs font-normal leading-relaxed text-main-color-text-secondary">Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo lacus meleifend menean diverra loremous.</p>
+                    </div>
+                    <button class="relative flex items-center justify-center mt-9 gap-2.5 text-base font-bold text-main-color-text-light bg-main-color-text-primary border border-solid border-main-color-primary py-3 px-10 md:px-14 cursor-pointer
+                                   hover:bg-main-color-secondary hover:text-main-color-primary hover:shadow-lg transition-all duration-300">
+                        <span class="my-auto">SHOP NOW</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner Section (Editor's Pick, Shoes, Accessories) -->
+        <section class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 py-8 w-full px-5">
+            <!-- EDITOR'S PICK -->
+            <div class="relative w-full max-w-sm md:w-96 min-h-48 md:min-h-52 overflow-hidden group cursor-pointer">
+                <img src="image/Banner_1.png" alt="Editor's Pick Banner" class="absolute inset-0 object-cover object-center w-full h-full group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-lg md:text-xl font-bold uppercase whitespace-nowrap text-center z-10">
+                    <h2 class="underline underline-offset-4">EDITOR'S PICK</h2>
+                </div>
+            </div>
+
+            <!-- SHOES -->
+            <div class="relative w-full max-w-sm md:w-96 min-h-48 md:min-h-52 overflow-hidden group cursor-pointer">
+                <img src="image/Banner_2.png" alt="Shoes Banner" class="absolute inset-0 object-cover object-center w-full h-full group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-lg md:text-xl font-bold uppercase whitespace-nowrap z-10">
+                    <h2>SHOES</h2>
+                </div>
+            </div>
+
+            <!-- ACCESSORIES -->
+            <div class="relative w-full max-w-sm md:w-96 min-h-48 md:min-h-52 overflow-hidden group cursor-pointer">
+                <img src="image/Banner_3.png" alt="Accessories Banner" class="absolute inset-0 object-cover object-center w-full h-full group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-lg md:text-xl font-bold uppercase whitespace-nowrap z-10">
+                    <h2>ACCESSORIES</h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Arrivals Section -->
+        <section class="flex flex-col items-center justify-start w-full px-5 py-10 lg:py-0 lg:pt-12 lg:pb-10">
+            <div class="flex flex-col items-center justify-start text-center text-main-color-text-primary w-full">
+                <div class="flex items-center justify-center w-full gap-4 md:gap-10 text-xl font-bold">
+                    <div class="flex-1 max-w-[150px] md:max-w-[200px] lg:max-w-none h-0.5 bg-main-color-primary"></div>
+                    <h2 class="text-main-color-text-primary text-xl md:text-2xl">NEW ARRIVALS</h2>
+                    <div class="flex-1 max-w-[150px] md:max-w-[200px] lg:max-w-none h-0.5 bg-main-color-primary"></div>
+                </div>
+                <div class="flex flex-col items-stretch justify-center mt-2.5 text-sm font-medium">
+                    <span class="text-main-color-text-primary px-2">View all</span>
+                    <div class="w-full h-px mt-1 bg-main-color-text-primary border border-solid border-main-color-primary"></div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 w-full mt-9 pb-5 justify-items-center">
+                <!-- Product Card 1 -->
+                <article class="w-full max-w-64">
+                    <div class="w-full">
+                        <div class="relative flex flex-col items-start w-full h-80 md:h-96">
+                            <a href="#" class="absolute inset-0 block group"> 
+                                <img src="image/Product_4.png" alt="Product 1" class="absolute inset-0 object-cover object-center w-full h-full group-hover:scale-105 transition-transform duration-300">
+                            </a>
+                            <div class="absolute top-0 left-0 text-white whitespace-nowrap font-normal text-xs leading-relaxed p-2.5 z-10"> 
+                                <div class="flex items-center justify-center w-10 gap-1.5 bg-main-color-badge-sale-red py-0.5 px-2">
+                                    <span>Sale</span>
+                                </div>
+                                <div class="flex items-center justify-center w-10 gap-1.5 bg-main-color-badge-black-100 mt-1 py-0.5 px-2">
+                                    <span>Sale</span>
+                                </div>
+                            </div>
+                            <button class="absolute top-2 right-2 flex flex-col items-center justify-center w-9 h-9 rounded-full bg-white border-none cursor-pointer z-10
+                                           hover:scale-110 hover:shadow-md transition-all duration-300">
+                                <img src="image/Add_to_wishlist_3.svg" alt="Add to wishlist" class="object-contain object-center w-4 fill-main-color-primary">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center justify-start w-full mt-4 text-center">
+                        <div class="flex flex-col items-center w-full text-main-color-text-primary font-normal text-xs leading-relaxed">
+                            <p class="text-main-color-text-support-2">SODLING</p>
+                            <h3 class="text-main-color-text-primary mt-1">
+                                <a href="#" class="hover:text-main-color-link-dark transition-colors duration-300 text-sm md:text-base">Naminos Dementus A Milance - Pattern</a>
+                            </h3>
+                            <p class="text-sm font-bold text-main-color-text-primary mt-1">$86.00 - $99.00</p>
+                        </div>
+                        <div class="flex items-center justify-center mt-4 gap-1.5 flex-wrap">
+                            <button class="flex items-center justify-center w-8 h-8 p-0.5 rounded-full border border-solid border-main-color-boder cursor-pointer hover:border-main-color-primary transition-colors duration-200">
+                                <div class="w-6 h-6 rounded-full bg-main-color-badge-yellow-80"></div>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 p-0.5 rounded-full border border-solid border-main-color-boder cursor-pointer hover:border-main-color-primary transition-colors duration-200">
+                                <div class="w-6 h-6 rounded-full bg-main-color-badge-light-red"></div>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 p-0.5 rounded-full border border-solid border-main-color-boder cursor-pointer hover:border-main-color-primary transition-colors duration-200">
+                                <div class="w-6 h-6 rounded-full bg-main-color-badge-blue-40"></div>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 p-0.5 rounded-full border border-solid border-main-color-boder cursor-pointer hover:border-main-color-primary transition-colors duration-200">
+                                <div class="w-6 h-6 rounded-full bg-main-color-badge-black-100"></div>
+                            </button>
+                            <button class="flex items-center justify-start gap-2 group cursor-pointer">
+                                <div class="flex items-center justify-center w-8 h-8 p-0.5 rounded-full border border-solid border-main-color-boder group-hover:border-main-color-primary transition-colors duration-200">
+                                    <div class="w-6 h-6 rounded-full bg-main-color-badge-grey-30"></div>
+                                </div>
+                                <span class="font-normal text-xs text-main-color-boder group-hover:text-main-color-primary transition-colors duration-200">+1</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product Card 2 -->
+                <article class="w-full max-w-64">
+                    <div class="w-full">
+                        <div class="relative flex flex-col items-start w-full h-80 md:h-96">
+                            <a href="#" class="absolute inset-0 block group">
+                                <img src="image/Product_2.png" alt="Product 2" class="absolute inset-0 object-cover object-center w-full h-full group-hover:scale-105 transition-transform duration-300">
+                            </a>
+                            <div class="absolute top-0 left-0 text-white whitespace-nowrap font-normal text-xs leading-relaxed p-2.5 z-10">
+                                <div class="flex items-center justify-center w-10 gap-1.5 bg-main-color-badge-sale-red py-0.5 px-2">
+                                    <span>Sale</span>
+                                </div>
+                                <div class="flex items-center justify-center w-10 gap-1.5 bg-main-color-badge-black-100 mt-1 py-0.5 px-2">
+                                    <span>Sale</span>
+                                </div>
+                            </div>
+                            <button class="absolute top-2 right-2 flex flex-col items-center justify-center w-9 h-9 rounded-full bg-white border-none cursor-pointer z-10
+                                           hover:scale-110 hover:shadow-md transition-all duration-300">
+                                <img src="image/Add_to_wishlist_3.svg" alt="Add to wishlist" class="object-contain object-center w-4 fill-main-color-primary">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center justify-start w-full mt-4 text-center">
+                        <div class="flex flex-col items-center w-full text-main-color-text-primary font-normal text-xs leading-relaxed">
+                            <p class="text-main-color-text-support-2">TOMORROW</p>
+                            <h3 class="text-main-color-text-primary mt-1">
+                                <a href="#" class="hover:text-main-color-link-dark transition-colors duration-300 text-sm md:text-base">Dinterdum Pretium Condimento - Pattern</a>
+                            </h3>
+                            <p class="text-sm font-bold text-main-color-text-primary mt-1">$139.00 - $189.00</p>
+                        </div>
+                        <div class="flex items-center justify-center mt-4 gap-1.5 flex-wrap">
+                            <button class="flex items-center justify-center w-8 h-8 p-0.5 rounded-full border border-solid border-main-color-boder cursor-pointer hover:border-main-color-primary transition-colors duration-200">
+                                <div class="w-6 h-6 rounded-full bg-main-color-badge-yellow-80"></div>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 p-0.5 rounded-full border border-solid border-main-color-boder cursor-pointer hover:border-main-color-primary transition-colors duration-200">
+                                <div class="w-6 h-6 rounded-full bg-main-color-badge-light-red"></div>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 p-0.5 rounded-full border border-solid border-main-color-boder cursor-pointer hover:border-main-color-primary transition-colors duration-200">
+                                <div class="w-6 h-6 rounded-full bg-main-color-badge-blue-40"></div>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 p-0.5 rounded-full border border-solid border-main-color-boder cursor-pointer hover:border-main-color-primary transition-colors duration-200">
+                                <div class="w-6 h-6 rounded-full bg-main-color-badge-black-100"></div>
+                            </button>
+                            <button class="flex items-center justify-start gap-2 group cursor-pointer">
+                                <div class="flex items-center justify-center w-8 h-8 p-0.5 rounded-full border border-solid border-main-color-boder group-hover:border-main-color-primary transition-colors duration-200">
+                                    <div class="w-6 h-6 rounded-full bg-main-color-badge-grey-30"></div>
+                                </div>
+                                <span class="font-normal text-xs text-main-color-boder group-hover:text-main-color-primary transition-colors duration-200">+1</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product Card 3 -->
+                <article class="w-full max-w-64">
+                    <div class="w-full">
+                        <div class="relative flex flex-col items-start w-full h-80 md:h-96">
+                            <a href="#" class="absolute inset-0 block group">
+                                <img src="image/Product_3.png" alt="Product 3" class="absolute inset-0 object-cover object-center w-full h-full group-hover:scale-105 transition-transform duration-300">
+                            </a>
+                            <div class="absolute top-0 left-0 text-white whitespace-nowrap font-normal text-xs leading-relaxed p-2.5 z-10">
+                                <div class="flex items-center justify-center w-10 gap-1.5 bg-main-color-badge-sale-red py-0.5 px-2">
+                                    <span>Sale</span>
+                                </div>
+                                <div class="flex items-center justify-center w-10 gap-1.5 bg-main-color-badge-black-100 mt-1 py-0.5 px-2">
+                                    <span>Sale</span>
+                                </div>
+                            </div>
+                            <button class="absolute top-2 right-2 flex flex-col items-center justify-center w-9 h-9 rounded-full bg-white border-none cursor-pointer z-10
+                                           hover:scale-110 hover:shadow-md transition-all duration-300">
+                                <img src="image/Add_to_wishlist_3.svg" alt="Add to wishlist" class="object-contain object-center w-4 fill-main-color-primary">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center justify-start w-full mt-4 text-center">
+                        <div class="flex flex-col items-center w-full text-main-color-text-primary font-normal text-xs leading-relaxed">
+                            <p class="text-main-color-text-support-2">PAUL SMITH</p>
+                            <h3 class="text-main-color-text-primary mt-1">
+                                <a href="#" class="hover:text-main-color-link-dark transition-colors duration-300 text-sm md:text-base">Magnis Darturien Metro Lacinis - Black</a>
+                            </h3>
+                            <p class="text-sm font-bold text-main-color-text-primary mt-1">$86.00</p>
+                        </div>
+                        <div class="flex items-center justify-center mt-4 gap-1.5 flex-wrap">
+                            <button class="flex items-center justify-center w-8 h-8 p-0.5 rounded-full border border-solid border-main-color-boder cursor-pointer hover:border-main-color-primary transition-colors duration-200">
+                                <div class="w-6 h-6 rounded-full bg-main-color-badge-yellow-80"></div>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 p-0.5 rounded-full border border-solid border-main-color-boder cursor-pointer hover:border-main-color-primary transition-colors duration-200">
+                                <div class="w-6 h-6 rounded-full bg-main-color-badge-light-red"></div>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 p-0.5 rounded-full border border-solid border-main-color-boder cursor-pointer hover:border-main-color-primary transition-colors duration-200">
+                                <div class="w-6 h-6 rounded-full bg-main-color-badge-blue-40"></div>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 p-0.5 rounded-full border border-solid border-main-color-boder cursor-pointer hover:border-main-color-primary transition-colors duration-200">
+                                <div class="w-6 h-6 rounded-full bg-main-color-badge-black-100"></div>
+                            </button>
+                            <button class="flex items-center justify-start gap-2 group cursor-pointer">
+                                <div class="flex items-center justify-center w-8 h-8 p-0.5 rounded-full border border-solid border-main-color-boder group-hover:border-main-color-primary transition-colors duration-200">
+                                    <div class="w-6 h-6 rounded-full bg-main-color-badge-grey-30"></div>
+                                </div>
+                                <span class="font-normal text-xs text-main-color-boder group-hover:text-main-color-primary transition-colors duration-200">+1</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product Card 4 -->
+                <article class="w-full max-w-64">
+                    <div class="w-full">
+                        <div class="relative flex flex-col items-start w-full h-80 md:h-96">
+                            <a href="#" class="absolute inset-0 block group">
+                                <img src="image/Product_4.png" alt="Product 4" class="absolute inset-0 object-cover object-center w-full h-full group-hover:scale-105 transition-transform duration-300">
+                            </a>
+                            <div class="absolute top-0 left-0 text-white whitespace-nowrap font-normal text-xs leading-relaxed p-2.5 z-10">
+                                <div class="flex items-center justify-center w-10 gap-1.5 bg-main-color-badge-sale-red py-0.5 px-2">
+                                    <span>Sale</span>
+                                </div>
+                                <div class="flex items-center justify-center w-10 gap-1.5 bg-main-color-badge-black-100 mt-1 py-0.5 px-2">
+                                    <span>Sale</span>
+                                </div>
+                            </div>
+                            <button class="absolute top-2 right-2 flex flex-col items-center justify-center w-9 h-9 rounded-full bg-white border-none cursor-pointer z-10
+                                           hover:scale-110 hover:shadow-md transition-all duration-300">
+                                <img src="image/Add_to_wishlist_3.svg" alt="Add to wishlist" class="object-contain object-center w-4 fill-main-color-primary">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center justify-start w-full mt-4 text-center">
+                        <div class="flex flex-col items-center w-full text-main-color-text-primary font-normal text-xs leading-relaxed">
+                            <p class="text-main-color-text-support-2">DONATELLO</p>
+                            <h3 class="text-main-color-text-primary mt-1">
+                                <a href="#" class="hover:text-main-color-link-dark transition-colors duration-300 text-sm md:text-base">Loremous Saliduar A Cosmopolito - Pattern</a>
+                            </h3>
+                            <p class="text-sm font-bold text-main-color-text-primary mt-1">$86.00 - $99.00</p>
+                        </div>
+                        <div class="flex items-center justify-center mt-4 gap-1.5 flex-wrap">
+                            <button class="flex items-center justify-center w-8 h-8 p-0.5 rounded-full border border-solid border-main-color-boder cursor-pointer hover:border-main-color-primary transition-colors duration-200">
+                                <div class="w-6 h-6 rounded-full bg-main-color-badge-yellow-80"></div>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 p-0.5 rounded-full border border-solid border-main-color-boder cursor-pointer hover:border-main-color-primary transition-colors duration-200">
+                                <div class="w-6 h-6 rounded-full bg-main-color-badge-light-red"></div>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 p-0.5 rounded-full border border-solid border-main-color-boder cursor-pointer hover:border-main-color-primary transition-colors duration-200">
+                                <div class="w-6 h-6 rounded-full bg-main-color-badge-blue-40"></div>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 p-0.5 rounded-full border border-solid border-main-color-boder cursor-pointer hover:border-main-color-primary transition-colors duration-200">
+                                <div class="w-6 h-6 rounded-full bg-main-color-badge-black-100"></div>
+                            </button>
+                            <button class="flex items-center justify-start gap-2 group cursor-pointer">
+                                <div class="flex items-center justify-center w-8 h-8 p-0.5 rounded-full border border-solid border-main-color-boder group-hover:border-main-color-primary transition-colors duration-200">
+                                    <div class="w-6 h-6 rounded-full bg-main-color-badge-grey-30"></div>
+                                </div>
+                                <span class="font-normal text-xs text-main-color-boder group-hover:text-main-color-primary transition-colors duration-200">+1</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <button class="flex items-center justify-center mt-9 gap-2.5 text-center text-main-color-text-primary bg-transparent border border-solid border-main-color-primary py-3 px-8 md:px-12 font-bold text-base cursor-pointer
+                           hover:bg-main-color-primary hover:text-main-color-text-light transition-all duration-300">
+                <span class="my-auto">SHOW MORE</span>
+            </button>
+        </section>
+
+        <!-- Instagram Section -->
+        <section class="flex flex-col items-center justify-center w-full bg-main-color-badge-grey-10 py-10 px-5 lg:px-80 lg:py-16">
+            <div class="flex flex-col items-center justify-start text-center">
+                <div class="flex flex-col items-center justify-start">
+                    <div class="flex items-center justify-start gap-2 md:gap-4 text-xl font-bold text-main-color-text-primary">
+                        <img src="image/Instagram.svg" alt="Instagram Icon" class="object-contain object-center w-4 h-4 md:w-5 md:h-5 fill-main-color-primary">
+                        <h2 class="my-auto text-main-color-text-primary text-xl md:text-2xl">#ELLA ON INSTAGRAM</h2>
+                    </div>
+                    <p class="mt-3 text-xs md:text-sm font-normal leading-relaxed text-main-color-text-secondary">Phasellus lorem malesuada ligula pulvinar commodo maecenas</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 mt-9">
+                    <img src="image/Instagram_post_1.png" alt="Instagram post 1" class="object-cover object-center w-full h-auto min-h-36 md:min-h-56">
+                    <img src="image/Instagram_post_2.png" alt="Instagram post 2" class="object-cover object-center w-full h-auto min-h-36 md:min-h-56">
+                    <img src="image/Instagram_post_3.png" alt="Instagram post 3" class="object-cover object-center w-full h-auto min-h-36 md:min-h-56">
+                    <img src="image/Instagram_post_4.png" alt="Instagram post 4" class="object-cover object-center w-full h-auto min-h-36 md:min-h-56 hidden md:block">
+                    <img src="image/Instagram_post_5.png" alt="Instagram post 5" class="object-cover object-center w-full h-auto min-h-36 md:min-h-56 hidden lg:block">
+                </div>
+            </div>
+
+            <button class="flex items-center justify-center mt-9 gap-2.5 text-center text-main-color-text-light bg-main-color-text-primary border border-solid border-main-color-primary py-3 px-10 md:px-14 font-bold text-base cursor-pointer
+                           hover:bg-main-color-secondary hover:text-main-color-primary hover:shadow-lg transition-all duration-300">
+                <span class="my-auto">VIEW GALLERY</span>
+            </button>
+        </section>
+
+        <!-- Footer -->
+        <footer class="z-0 w-full">
+            <div class="flex flex-col md:flex-row items-start justify-center gap-8 md:gap-8 bg-main-color-primary py-10 px-5 md:px-10">
+                <!-- Footer Navigation Columns -->
+                <div class="flex flex-col sm:flex-row items-start justify-start w-full md:w-auto md:min-w-60 gap-8 text-main-color-secondary">
+                    <div class="flex flex-col items-stretch justify-center w-full sm:w-52">
+                        <h3 class="text-base font-bold text-main-color-secondary mb-3 md:mb-5">SHOP</h3>
+                        <nav class="flex flex-col items-stretch justify-center w-full text-xs font-normal leading-relaxed">
+                            <a href="#" class="text-main-color-secondary no-underline hover:text-main-color-link-dark transition-colors duration-300 mt-1">New In</a>
+                            <a href="#" class="mt-2 text-main-color-secondary no-underline hover:text-main-color-link-dark transition-colors duration-300">Skincares</a>
+                            <a href="#" class="mt-2 text-main-color-secondary no-underline hover:text-main-color-link-dark transition-colors duration-300">Makeups</a>
+                            <a href="#" class="mt-2 text-main-color-secondary no-underline hover:text-main-color-link-dark transition-colors duration-300">Bags & Accessories</a>
+                            <a href="#" class="mt-2 text-main-color-secondary no-underline hover:text-main-color-link-dark transition-colors duration-300">Hair</a>
+                            <a href="#" class="mt-2 text-main-color-secondary no-underline hover:text-main-color-link-dark transition-colors duration-300">Sale</a>
+                            <a href="#" class="mt-2 text-main-color-secondary no-underline hover:text-main-color-link-dark transition-colors duration-300">Lookbook</a>
+                        </nav>
+                    </div>
+
+                    <div class="flex flex-col items-stretch justify-center w-full sm:w-52 mt-6 sm:mt-0">
+                        <h3 class="text-base font-bold text-main-color-secondary mb-3 md:mb-5">CUSTOMER SERVICE</h3>
+                        <nav class="flex flex-col items-stretch justify-center w-full text-xs font-normal leading-relaxed">
+                            <a href="#" class="text-main-color-secondary no-underline hover:text-main-color-link-dark transition-colors duration-300 mt-1">Search Terms</a>
+                            <a href="#" class="mt-2 text-main-color-secondary no-underline hover:text-main-color-link-dark transition-colors duration-300">Advanced Search</a>
+                            <a href="#" class="mt-2 text-main-color-secondary no-underline hover:text-main-color-link-dark transition-colors duration-300">Orders and Returns</a>
+                            <a href="#" class="mt-2 text-main-color-secondary no-underline hover:text-main-color-link-dark transition-colors duration-300">Contact Us</a>
+                            <a href="#" class="mt-2 text-main-color-secondary no-underline hover:text-main-color-link-dark transition-colors duration-300">Theme FAQs</a>
+                            <a href="#" class="mt-2 text-main-color-secondary no-underline hover:text-main-color-link-dark transition-colors duration-300">Consultants</a>
+                            <a href="#" class="mt-2 text-main-color-secondary no-underline hover:text-main-color-link-dark transition-colors duration-300">Store Locations</a>
+                        </nav>
+                    </div>
+
+                    <div class="flex flex-col items-stretch justify-center w-full sm:w-52 mt-6 sm:mt-0">
+                        <h3 class="text-base font-bold text-main-color-secondary mb-3 md:mb-5">INFORMATION</h3>
+                        <nav class="flex flex-col items-stretch justify-center w-full text-xs font-normal leading-relaxed">
+                            <a href="#" class="text-main-color-secondary no-underline hover:text-main-color-link-dark transition-colors duration-300 mt-1">About</a>
+                            <a href="#" class="mt-2 text-main-color-secondary no-underline hover:text-main-color-link-dark transition-colors duration-300">Customer Service</a>
+                            <a href="#" class="mt-2 text-main-color-secondary no-underline hover:text-main-color-link-dark transition-colors duration-300">Reward Program</a>
+                            <a href="#" class="mt-2 text-main-color-secondary no-underline hover:text-main-color-link-dark transition-colors duration-300">Shipping & Return</a>
+                            <a href="#" class="mt-2 text-main-color-secondary no-underline hover:text-main-color-link-dark transition-colors duration-300">Privacy Policy</a>
+                            <a href="#" class="mt-2 text-main-color-secondary no-underline hover:text-main-color-link-dark transition-colors duration-300">Terms & Conditions</a>
+                            <a href="#" class="mt-2 text-main-color-secondary no-underline hover:text-main-color-link-dark transition-colors duration-300">Blog</a>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Newsletter and Social Media -->
+                <div class="w-full md:min-w-60 md:w-auto md:max-w-lg mt-8 md:mt-0">
+                    <div class="w-full">
+                        <h3 class="text-base font-bold text-main-color-text-light">NEWSLETTER SIGN UP</h3>
+                        <div class="w-full mt-4 font-normal">
+                            <p class="text-xs leading-relaxed text-main-color-text-support-3">Sign up for exclusive updates, new arrivals & insider only discounts</p>
+                            <div class="flex flex-col sm:flex-row items-start justify-start mt-4 gap-2">
+                                <div class="flex items-center justify-center w-full sm:w-80 min-w-60 gap-2.5 text-xs text-main-color-text-support-2 leading-relaxed border border-solid border-main-color-boder py-3 pl-4 pr-10">
+                                    <input type="email" placeholder="Email Address" class="my-auto w-full bg-transparent border-none outline-none text-main-color-text-support-2 placeholder-main-color-text-support-2">
+                                </div>
+                                <button class="flex items-center justify-center text-sm text-main-color-text-primary whitespace-nowrap bg-main-color-bg-light py-3.5 px-8 sm:px-12 border-none cursor-pointer w-full sm:w-auto mt-2 sm:mt-0
+                                               hover:bg-main-color-badge-grey-30 transition-colors duration-300">
+                                    <span class="my-auto">SUBMIT</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-stretch justify-start w-full max-w-sm sm:max-w-60 mt-7 min-h-9 gap-4 mx-auto md:mx-0">
+                        <a href="#" class="flex items-center justify-center flex-1 w-9 h-9 rounded-full bg-main-color-bg-light p-2.5 no-underline
+                                          hover:bg-main-color-badge-grey-30 hover:scale-105 transition-all duration-300">
+                            <img src="image/Facebook.svg" alt="Facebook" class="object-contain object-center w-2 fill-main-color-primary flex-1">
+                        </a>
+                        <a href="#" class="flex items-center justify-center flex-1 w-9 h-9 rounded-full bg-main-color-bg-light p-2.5 no-underline
+                                          hover:bg-main-color-badge-grey-30 hover:scale-105 transition-all duration-300">
+                            <img src="image/Twitter.svg" alt="Twitter" class="object-contain object-center w-4 h-4 fill-main-color-primary flex-1">
+                        </a>
+                        <a href="#" class="flex items-center justify-center flex-1 w-9 h-9 rounded-full bg-main-color-bg-light p-2.5 no-underline
+                                          hover:bg-main-color-badge-grey-30 hover:scale-105 transition-all duration-300">
+                            <img src="image/Instagram_1.svg" alt="Instagram" class="object-contain object-center w-4 h-4 fill-main-color-primary flex-1">
+                        </a>
+                        <a href="#" class="flex items-center justify-center flex-1 w-9 h-9 rounded-full bg-main-color-bg-light p-2.5 no-underline
+                                          hover:bg-main-color-badge-grey-30 hover:scale-105 transition-all duration-300">
+                            <img src="image/YouTube.svg" alt="YouTube" class="object-contain object-center w-5 fill-main-color-primary flex-1">
+                        </a>
+                        <a href="#" class="flex items-center justify-center flex-1 w-9 h-9 rounded-full bg-main-color-bg-light p-2.5 no-underline
+                                          hover:bg-main-color-badge-grey-30 hover:scale-105 transition-all duration-300">
+                            <img src="image/Pinterest.svg" alt="Pinterest" class="object-contain object-center w-4 h-4 fill-main-color-primary flex-1">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright and Payment Methods -->
+            <div class="flex flex-col md:flex-row items-center justify-between w-full gap-5 md:gap-10 bg-main-color-primary border-t border-solid border-main-color-text-secondary py-8 px-5 md:px-10 lg:px-96">
+                <p class="my-auto font-normal text-xs leading-relaxed text-main-color-text-support-1 text-center md:text-left">© 2014 Ella Demo. All Rights Reserved. Powered by Shopify.<br class="hidden md:block">Shopify Themes by HaloThemes.com</p>
+                <div class="my-auto flex flex-wrap items-center justify-center min-w-60 gap-3">
+                    <img src="image/Visa.png" alt="Visa" class="object-contain object-center w-8 h-5">
+                    <img src="image/Mastercard.png" alt="Mastercard" class="object-contain object-center w-8 h-5">
+                    <img src="image/American_Express.png" alt="American Express" class="object-contain object-center w-8 h-5">
+                    <img src="image/Discover.png" alt="Discover" class="object-contain object-center w-8 h-5">
+                    <img src="image/PayPal.png" alt="PayPal" class="object-contain object-center w-8 h-5">
+                    <img src="image/Apple_Pay.png" alt="Apple Pay" class="object-contain object-center w-8 h-5">
+                    <img src="image/Google_Pay.png" alt="Google Pay" class="object-contain object-center w-8 h-5">
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
